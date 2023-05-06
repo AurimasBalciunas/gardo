@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import ArrowKeys from './components/ArrowKeys/ArrowKeys'
 
 function App() {
+  const handleArrowClick = (direction) => {
+    console.log(`Arrow clicked: ${direction}`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ArrowKeys onArrowClick={handleArrowClick} />
     </div>
-  );
+  )
 }
 
 export default App;
